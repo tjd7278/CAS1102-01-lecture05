@@ -29,8 +29,8 @@ void decode_steganography(int image_data[], int data_size, std::string key) {
      */
     bool B = false;
     while (B == false){
-        for (int i=0; i<strlen(std::string key); i++) {
-            int jump = (int)std::string key[i];
+        for (int i=0; i<key.length(); i++) {
+            int jump = (int)key[i];
             curentIndex += jump;
             int secret_value = image_data[currentIndex];
             if (secret_value == 0){
